@@ -53,18 +53,18 @@ function initialiseState() {
 }
 
 window.addEventListener('load', function() {
-    var link = document.createElement('link');
-    link.rel = 'manifest';
-    link.href = './manifest.json';
-    document.head.appendChild(link);
-
-    setTimeout(() => {
-        // Check that service workers are supported, if so, progressively
-        // enhance and add push messaging support, otherwise continue without it.
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./notification-worker.js')
-        } else {
-            console.warn('Service workers aren\'t supported in this browser.');
-        }
-    }, 5000);
+    // var link = document.createElement('link');
+    // link.rel = 'manifest';
+    // link.href = './manifest.json';
+    // document.head.appendChild(link);
+    //
+    // setTimeout(() => {
+    //     // Check that service workers are supported, if so, progressively
+    //     // enhance and add push messaging support, otherwise continue without it.
+    //     if ('serviceWorker' in navigator) {
+    //         navigator.serviceWorker.register('./notification-worker.js')
+    //     } else {
+    //         console.warn('Service workers aren\'t supported in this browser.');
+    //     }
+    // }, 5000);
 });
